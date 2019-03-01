@@ -1,0 +1,68 @@
+@import '@/qunar/reset.scss';
+
+html, body, #app {
+    @include rect(100%, 100%);
+    @include overflow();
+}
+.detailsphone{
+    background: #f4f4f4;
+    @include rect(100%, auto);
+    float: left;
+    h4{
+        text-align: center;
+        margin-top: 0.2rem;
+        font-size: 0.2rem;
+        font-weight:bold;
+        margin-bottom: 0.1rem; 
+        position: relative;       
+    }
+    .detailsplugphone{
+        @include rect(100%, 100%);
+        margin: 0.05rem;
+        a{
+            margin: 0.05rem;
+            background: #fff;
+            display: block;
+            @include rect(46%, 2.5rem);
+            float: left;
+            img{
+                margin-top: 0.1rem;
+                @include rect(100%, 65%)
+            }                
+            h5 {
+                text-align: center;
+                color: #000;
+                margin-bottom: 0.05rem;
+            }
+            h6 {
+                text-align: center;
+                color: #f00;
+                font-size:0.11rem;
+                padding: 0.02rem;
+                font-weight:normal; 
+                margin-bottom: 0.05rem;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 95%;
+                @include rect(95%, 0.2rem);
+                overflow: hidden;
+                span{
+                    color: #fff;
+                    background: #f00;
+                    border:0.01rem #f00 solid;
+                    padding: 0.02rem;
+                }
+                b{
+                    border:0.01rem #f00 solid;
+                    padding: 0.02rem;
+                    padding-left: 0.03rem;
+                }
+            }
+            p{
+                text-align: center;
+                margin-bottom: 0.05rem;
+                color: #f00;
+            }
+        }
+    }
+}

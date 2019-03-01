@@ -1,0 +1,45 @@
+@import '@/qunar/reset.scss';
+
+html, body, #app {
+    @include rect(100%, 100%);
+    @include overflow();
+}
+
+.details_plug{
+    background: #f4f4f4;
+    @include rect(100%, auto);
+    float: left;
+    .detailspluglist{
+        @include rect(100%, 100%);
+        margin: 0.05rem;
+        a{
+            margin: 0.05rem;
+            background: #fff;
+            display: block;
+            @include rect(46%, 2.5rem);
+            float: left;
+            img{
+                text-align: center;
+                margin-top: 0.1rem;
+                @include rect(80%, 60%)
+            }                
+            h5 {
+                text-align: center;
+                color: #000;
+                margin-bottom: 0.05rem;
+                font-weight:normal;
+            }
+            h3{
+                font-weight:normal;
+                color: #999;
+                font-size: 0.12rem;
+            }
+            h6 {
+                color: #f00;
+                font-size:0.15rem;
+                font-weight:normal;
+                padding-top: 0.05rem; 
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+@import '@/qunar/reset.scss';
+
+html, body, #app {
+    @include rect(100%, 100%);
+    @include overflow();
+}
+.container {
+    @include flex();
+    @include rect(100%, auto);
+    @include overflow();
+    @include flex-direction(column);
+    .tip {
+        @include rect(100%, 0.4rem); // width: 100%;height: 0.5rem;
+        // @include background-color(#eee); // background-color: #eee;
+        background: #f7f7f7;
+        @include flexbox();
+        
+        li {
+            @include flex();
+
+            @include rect(auto, 100%);
+            // 实现的是元素的内部元素水平垂直居中
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(); // justify-content: center
+            @include align-items(); // align-items: center
+            margin: 0.05rem;
+            float: left; 
+            
+            a {
+                // padding: 0.05rem;
+                @include align-items(); // align-items: center
+                @include rect(100%, 100%);
+                @include justify-content();
+                padding-bottom: 0.1rem; 
+                img {
+                    @include rect(0.2rem, 0.2rem);
+                    float: left;  
+                    padding-left: 0.03rem
+                }
+                p {
+                    font-size: 0.08rem;
+                    float: left;
+                    color: #999;
+                    margin-top:0.03rem; 
+                    padding-left: 0.05rem;  
+                }
+            }
+        }       
+    }
+    .hot {
+        @include rect(100%, 0.65rem);
+        padding: 0.05rem;
+        margin-bottom: 0.08rem;  
+        li {
+            @include flex();
+            @include rect(25%, 100%);
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content();
+            @include align-items();
+            float: left;  
+            a {
+                @include flex();
+                @include align-items();
+                @include rect(100%, 100%);
+                @include justify-content();
+                img {
+                    @include rect(0.4rem, 0.4rem);
+                    margin-left: 0.2rem;
+                    line-height: 0.6rem;
+                }
+                p {
+                    font-size: 0.1rem;
+                    color: #999;
+                    line-height: 0.4rem;
+                    height: 0.4rem;
+                    margin-left: 0.2rem;  
+                }  
+            }
+        }        
+    }
+    .smallhot{
+        @include rect(100%, 2.5rem);
+        background: #f4f4f4;
+        padding-top: 0.1rem;  
+        .smallhotleft {
+            @include rect(50%, 100%);
+            float: left;
+            a {
+                img {
+                    @include rect(100%, 100%);
+                    float: left; 
+                }
+            }
+        }
+        .smallhotright{
+            float: left;
+            @include rect(50%, 100%);
+            a {
+                img {
+                    @include rect(100%, 50%);
+                    float: left;
+                }
+            }
+        }
+    }
+    .smartphone{
+        background: #f4f4f4;
+        @include rect(100%, auto);
+        float: left;
+        h4{
+            text-align: center;
+            margin-top: 0.2rem;
+            font-size: 0.2rem;
+            font-weight:bold;
+            margin-bottom: 0.2rem; 
+            position: relative;
+            
+        }
+        h4::after{
+            position: absolute;
+            content: "";
+            width: 6vw;
+            height: .7vw;
+            background: #0bbbef;
+            left: 50%;
+            transform: translate(-50%);
+            bottom: -2vw;
+        }
+        img{
+            @include rect(100%, 1.5rem);
+            margin-bottom: 0.05rem; 
+        }
+        .smartphonelist{
+            @include rect(100%, 100%);
+            margin: 0.05rem;
+            a{
+                margin: 0.05rem;
+                background: #fff;
+                display: block;
+                @include rect(46%, 2.5rem);
+                float: left;
+                img{
+                    margin-top: 0.1rem;
+                }                
+                h5 {
+                    text-align: center;
+                    color: #000;
+                    margin-bottom: 0.05rem;
+                }
+                h6 {
+                    text-align: center;
+                    color: #f00;
+                    font-size:0.11rem;
+                    padding: 0.02rem;
+                    font-weight:normal; 
+                    margin-bottom: 0.05rem;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 95%;
+                    @include rect(95%, 0.2rem);
+                    overflow: hidden;
+                    span{
+                        color: #fff;
+                        background: #f00;
+                        border:0.01rem #f00 solid;
+                        padding: 0.02rem;
+                    }
+                    b{
+                        border:0.01rem #f00 solid;
+                        padding: 0.02rem;
+                        padding-left: 0.03rem;
+                    }
+                }
+                p{
+                    text-align: center;
+                    margin-bottom: 0.05rem;
+                    color: #f00;
+                }
+            }
+        }
+    }
+        
+}
+#btntotop{
+    border: 0.01rem #00b4ff solid;
+}
